@@ -59,6 +59,7 @@ struct MatchedGeometryEffectexample: View {
     
     let categories: [String] = ["Americano", "Cappuccino", "Espresso"]
     @State private var selected: String = ""
+    @Namespace private var namespacee
     
     var body: some View {
         
@@ -68,6 +69,7 @@ struct MatchedGeometryEffectexample: View {
                     if selected == category {
                         RoundedRectangle(cornerRadius: 12)
                             .fill(Color.cyan.opacity(0.6))
+                            .matchedGeometryEffect(id: "category_background", in: namespacee)
                     }
                     Text(category)
                         .bold()
@@ -86,20 +88,3 @@ struct MatchedGeometryEffectexample: View {
         .background(Color.brown.opacity(0.6))    }
 }
 
-
-//// ZStack {
-//    // if selected == category {
-//    // Text(category)
-//
-////                        RoundedRectangle(cornerSize: 12)
-////                            .fill(Color.gray.opacity(0.4))
-//     //}
-//
-// }
-// .frame(maxWidth: .infinity)
-// .frame(height: 50)
-////                .onTapGesture {
-////                    withAnimation(.spring()) {
-////                        selected = category
-////                    }
-////                }
