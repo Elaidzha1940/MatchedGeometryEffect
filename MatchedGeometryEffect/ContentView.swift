@@ -47,3 +47,11 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct MatchedGeometryEffectexample: View {
+    
+    let categories: [String] = ["Americano", "Cappuccino", "Espresso"]
+    var body: some View {
+        
+    }
+}
