@@ -36,7 +36,7 @@ struct ContentView: View {
                         .bold()
                         .foregroundColor(.white)
                 }
-
+                
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -51,7 +51,55 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MatchedGeometryEffectexample()
     }
 }
 
+struct MatchedGeometryEffectexample: View {
+    
+    let categories: [String] = ["Americano", "Cappuccino", "Espresso"]
+    @State private var selected: String = ""
+    
+    var body: some View {
+        
+        HStack {
+            ForEach(categories, id: \.self) { category in
+                ZStack {
+                    if selected == category {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.cyan.opacity(0.6))
+                    }
+                    Text(category)
+                        .bold()
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        selected = category
+                                    }
+                                }
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.brown.opacity(0.6))    }
+}
+
+
+//// ZStack {
+//    // if selected == category {
+//    // Text(category)
+//
+////                        RoundedRectangle(cornerSize: 12)
+////                            .fill(Color.gray.opacity(0.4))
+//     //}
+//
+// }
+// .frame(maxWidth: .infinity)
+// .frame(height: 50)
+////                .onTapGesture {
+////                    withAnimation(.spring()) {
+////                        selected = category
+////                    }
+////                }
