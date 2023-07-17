@@ -11,6 +11,7 @@
 		E4AFFAFF2A657FBF00720E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFFAFE2A657FBF00720E2A /* ContentView.swift */; };
 		E4AFFB012A657FBF00720E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AFFB002A657FBF00720E2A /* Assets.xcassets */; };
 		E4AFFB052A657FBF00720E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AFFB042A657FBF00720E2A /* Preview Assets.xcassets */; };
+		E4AFFB0C2A6589B800720E2A /* MatchedGeometryEffectexample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFFB0B2A6589B800720E2A /* MatchedGeometryEffectexample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E4AFFB002A657FBF00720E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4AFFB022A657FBF00720E2A /* MatchedGeometryEffect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatchedGeometryEffect.entitlements; sourceTree = "<group>"; };
 		E4AFFB042A657FBF00720E2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4AFFB0B2A6589B800720E2A /* MatchedGeometryEffectexample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectexample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E4AFFB002A657FBF00720E2A /* Assets.xcassets */,
 				E4AFFB022A657FBF00720E2A /* MatchedGeometryEffect.entitlements */,
 				E4AFFB032A657FBF00720E2A /* Preview Content */,
+				E4AFFB0B2A6589B800720E2A /* MatchedGeometryEffectexample.swift */,
 			);
 			path = MatchedGeometryEffect;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4AFFB0C2A6589B800720E2A /* MatchedGeometryEffectexample.swift in Sources */,
 				E4AFFAFF2A657FBF00720E2A /* ContentView.swift in Sources */,
 				E4AFFAFD2A657FBF00720E2A /* MatchedGeometryEffectApp.swift in Sources */,
 			);

@@ -21,14 +21,21 @@ struct ContentView: View {
             if !isClicked {
                 RoundedRectangle(cornerRadius: 20)
                     .matchedGeometryEffect(id: "rectangle", in: namespace)
-                    .frame(width: 122, height: 35)
+                    .frame(width: 122, height: 36)
             }
             Spacer()
             
             if isClicked {
-                RoundedRectangle(cornerRadius: 12)
-                    .matchedGeometryEffect(id: "rectangle", in: namespace)
-                    .frame(width: 150, height: 100)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
+                        .matchedGeometryEffect(id: "rectangle", in: namespace)
+                        .frame(width: 300, height: 60)
+                        .foregroundColor(.gray.opacity(0.9))
+                    Text("Hello!")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
+                }
 
             }
         }
@@ -48,10 +55,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct MatchedGeometryEffectexample: View {
-    
-    let categories: [String] = ["Americano", "Cappuccino", "Espresso"]
-    var body: some View {
-        
-    }
-}
