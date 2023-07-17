@@ -20,15 +20,15 @@ struct ContentView: View {
             
             if !isClicked {
                 RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 150, height: 100)
                     .matchedGeometryEffect(id: "rectangle", in: namespace)
+                    .frame(width: 122, height: 35)
             }
             Spacer()
             
             if isClicked {
                 RoundedRectangle(cornerRadius: 12)
-                    .frame(width: 80, height: 50)
                     .matchedGeometryEffect(id: "rectangle", in: namespace)
+                    .frame(width: 150, height: 100)
 
             }
         }
