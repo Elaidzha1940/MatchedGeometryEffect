@@ -65,26 +65,31 @@ struct MatchedGeometryEffectexample: View {
         
         HStack {
             ForEach(categories, id: \.self) { category in
-                ZStack {
+                
+                ZStack(alignment: .bottom) {
                     if selected == category {
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.cyan.opacity(0.6))
+                            .fill(Color.white)
                             .matchedGeometryEffect(id: "category_background", in: namespacee)
+                            .frame(width: 70, height: 2)
+                            .offset(y: 10)
                     }
                     Text(category)
                         .bold()
+                        .foregroundColor(selected == category ? .white : .black)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                                .onTapGesture {
-                                    withAnimation(.spring()) {
-                                        selected = category
-                                    }
-                                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        selected = category
+                    }
+                }
             }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.brown.opacity(0.6))    }
+        .background(Color.black.opacity(0.4))
+    }
 }
 
